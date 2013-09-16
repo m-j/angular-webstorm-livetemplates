@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templateSet group="mj-angular">
+  <template name="mgclass" value="define(function(){&#10;    var $CONTROLLER_NAME$ = function(){&#10;        $ENDS$&#10;    }&#10;&#10;    $CONTROLLER_NAME$.$inject = [];&#10;&#10;    return $CONTROLLER_NAME$;&#10;});" description="Angular Ready Class" toReformat="true" toShortenFQNames="true">
+    <variable name="CONTROLLER_NAME" expression="capitalize(fileNameWithoutExtension())" defaultValue="TheController" alwaysStopAt="true" />
+    <variable name="ENDS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="CoffeeScript" value="false" />
+      <option name="HAML" value="false" />
+      <option name="DART" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="mgspec" value="define(['angularMocks', '../$UNIT_FILE_NAME$'],&#10;    function(angularMocks, $UNIT_NAME$){&#10;        describe('$UNIT_NAME$', function(){&#10;            it('dependency is loaded', function(){&#10;                expect($UNIT_NAME$).toBeDefined();&#10;            });            &#10;        });&#10;    }&#10;);" description="Spec of Angular Unit" toReformat="false" toShortenFQNames="true">
+    <variable name="UNIT_NAME" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <variable name="UNIT_FILE_NAME" expression="decapitalize(UNIT_NAME)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="CoffeeScript" value="false" />
+      <option name="HAML" value="false" />
+      <option name="DART" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="mgfactory" value="define(function () {&#10;    var $DEPENDENCY_NAME$ = function () {&#10;        return {&#10;        &#10;        }&#10;    }&#10;&#10;    $DEPENDENCY_NAME$.$inject = [];&#10;&#10;    return $DEPENDENCY_NAME$;&#10;});" description="Angular Ready Factory" toReformat="false" toShortenFQNames="true">
+    <variable name="DEPENDENCY_NAME" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="CoffeeScript" value="false" />
+      <option name="HAML" value="false" />
+      <option name="DART" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="mgdep" value="$MODULE_NAME$.$DEP_TYPE$('$DEP_NAME$', $DEP_VARIABLE$);" description="Register Angular Dependency" toReformat="false" toShortenFQNames="true">
+    <variable name="MODULE_NAME" expression="completeSmart()" defaultValue="module" alwaysStopAt="true" />
+    <variable name="DEP_TYPE" expression="enum(&quot;controller&quot;, &quot;factory&quot;, &quot;service&quot;, &quot;directive&quot;)" defaultValue="controller" alwaysStopAt="true" />
+    <variable name="DEP_VARIABLE" expression="completeSmart()" defaultValue="" alwaysStopAt="true" />
+    <variable name="DEP_NAME" expression="decapitalize(DEP_VARIABLE)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="CoffeeScript" value="false" />
+      <option name="HAML" value="false" />
+      <option name="DART" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="mgjgetset" value="get$NAME_CAP$ : function(){&#10;    return $NAME$;&#10;},&#10;set$NAME_CAP$ : function($NAME$_){&#10;&#9;$NAME$ = $NAME$_;&#10;}," description="Java Style Getter And Setter" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="variable" alwaysStopAt="true" />
+    <variable name="NAME_CAP" expression="capitalize(NAME)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="CoffeeScript" value="false" />
+      <option name="HAML" value="false" />
+      <option name="DART" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="mgmodule" value="define(&#10;    [&#10;        'angular'&#10;    ]&#10;    , function(&#10;            angular&#10;        )&#10;    {&#10;        var $MODULE_VAR$ = angular.module('$MODLUE_NAME$', []);&#10;    }&#10;);" description="Angular Module" toReformat="false" toShortenFQNames="true">
+    <variable name="MODULE_VAR" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <variable name="MODLUE_NAME" expression="&quot;modules.&quot;" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="CoffeeScript" value="false" />
+      <option name="HAML" value="false" />
+      <option name="DART" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="mxspec" value="define(['../$UNIT_FILE_NAME$'],&#10;    function($UNIT_NAME$){&#10;        describe('$UNIT_NAME$', function(){&#10;            it('dependency is loaded', function(){&#10;                expect($UNIT_NAME$).toBeDefined();&#10;            });            &#10;        });&#10;    }&#10;);" description="RequireJs Spec" toReformat="false" toShortenFQNames="true">
+    <variable name="UNIT_FILE_NAME" expression="decapitalize(UNIT_NAME)" defaultValue="" alwaysStopAt="true" />
+    <variable name="UNIT_NAME" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="CoffeeScript" value="false" />
+      <option name="HAML" value="false" />
+      <option name="DART" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+</templateSet>
+
