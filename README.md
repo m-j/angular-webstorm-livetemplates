@@ -18,3 +18,4 @@ Following templates are available:
 * mgfactory
 * mgmodule
 * mgspec
+* mgdirective
