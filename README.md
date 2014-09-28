@@ -8,6 +8,10 @@ To install templates copy or link them into
 WebStorm6:
 `~/Library/Preferences/WebStorm6/templates`
 
+on windows:
+
+`C:\Users\<USER>\.WebStorm6\config\templates`
+
 IntelliJ Idea 12:
 `~/Library/Preferences/IntelliJIdea12/templates`
 
