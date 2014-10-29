@@ -14,9 +14,9 @@
       <option name="CSS_RULESET_LIST" value="false" />
       <option name="CSS" value="false" />
       <option name="JAVA_SCRIPT" value="true" />
-      <option name="CoffeeScript" value="false" />
       <option name="HAML" value="false" />
       <option name="DART" value="false" />
+      <option name="CoffeeScript" value="false" />
       <option name="OTHER" value="false" />
     </context>
   </template>
@@ -35,9 +35,9 @@
       <option name="CSS_RULESET_LIST" value="false" />
       <option name="CSS" value="false" />
       <option name="JAVA_SCRIPT" value="true" />
-      <option name="CoffeeScript" value="false" />
       <option name="HAML" value="false" />
       <option name="DART" value="false" />
+      <option name="CoffeeScript" value="false" />
       <option name="OTHER" value="false" />
     </context>
   </template>
@@ -54,9 +54,9 @@
       <option name="CSS_RULESET_LIST" value="false" />
       <option name="CSS" value="false" />
       <option name="JAVA_SCRIPT" value="true" />
-      <option name="CoffeeScript" value="false" />
       <option name="HAML" value="false" />
       <option name="DART" value="false" />
+      <option name="CoffeeScript" value="false" />
       <option name="OTHER" value="false" />
     </context>
   </template>
@@ -76,9 +76,9 @@
       <option name="CSS_RULESET_LIST" value="false" />
       <option name="CSS" value="false" />
       <option name="JAVA_SCRIPT" value="true" />
-      <option name="CoffeeScript" value="false" />
       <option name="HAML" value="false" />
       <option name="DART" value="false" />
+      <option name="CoffeeScript" value="false" />
       <option name="OTHER" value="false" />
     </context>
   </template>
@@ -96,9 +96,9 @@
       <option name="CSS_RULESET_LIST" value="false" />
       <option name="CSS" value="false" />
       <option name="JAVA_SCRIPT" value="true" />
-      <option name="CoffeeScript" value="false" />
       <option name="HAML" value="false" />
       <option name="DART" value="false" />
+      <option name="CoffeeScript" value="false" />
       <option name="OTHER" value="false" />
     </context>
   </template>
@@ -116,9 +116,9 @@
       <option name="CSS_RULESET_LIST" value="false" />
       <option name="CSS" value="false" />
       <option name="JAVA_SCRIPT" value="true" />
-      <option name="CoffeeScript" value="false" />
       <option name="HAML" value="false" />
       <option name="DART" value="false" />
+      <option name="CoffeeScript" value="false" />
       <option name="OTHER" value="false" />
     </context>
   </template>
@@ -135,10 +135,17 @@
       <option name="CSS_RULESET_LIST" value="false" />
       <option name="CSS" value="false" />
       <option name="JAVA_SCRIPT" value="true" />
-      <option name="CoffeeScript" value="false" />
       <option name="HAML" value="false" />
       <option name="DART" value="false" />
+      <option name="CoffeeScript" value="false" />
       <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="mgroutes" value="define(function(){&#10;    var $FILE_NAME$ = function($stateProvider, $urlRouterProvider){&#10;        $stateProvider&#10;            .state('$FIRST_ROUTE_NAME$', {&#10;                'url': '/$FIRST_ROUTE_NAME$',&#10;                'views': {&#10;                    '@': {&#10;                        template: 'Hello World',&#10;                        controller: function(){}&#10;                    }&#10;                }&#10;            })&#10;    }&#10;&#10;    $FILE_NAME$.$inject = ['$stateProvider', '$urlRouterProvider']&#10;&#10;    return $FILE_NAME$&#10;})" description="Routes config for module" toReformat="false" toShortenFQNames="true">
+    <variable name="FILE_NAME" expression="fileNameWithoutExtension" defaultValue="" alwaysStopAt="true" />
+    <variable name="FIRST_ROUTE_NAME" expression="&quot;hello&quot;" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
 </templateSet>
